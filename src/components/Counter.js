@@ -16,6 +16,12 @@ const Counter = () => {
   const decrementHandler = () => {
     dispatch(counterAction.decrement());
   };
+  const incrementby2Handler = () => {
+    dispatch(counterAction.incrementby2(2));
+  };
+  const decrementby2Handler = () => {
+    dispatch(counterAction.decrementby2(2));
+  };
   return (
     <div>
       <div style={{ backgroundColor: "white", padding: "20px" }}>
@@ -28,7 +34,15 @@ const Counter = () => {
           >
             INCREMENT
           </button>
-          <button onClick={decrementHandler}> DECREMENT</button>
+          <button onClick={incrementby2Handler}> INCREMENT BY 2</button>
+          <button
+            onClick={decrementHandler}
+            style={{ marginLeft: "10px", marginRight: "10px" }}
+          >
+            {" "}
+            DECREMENT
+          </button>
+          <button onClick={decrementby2Handler}> DECREMENT BY 2</button>
         </div>
       </div>
     </div>
