@@ -12,6 +12,9 @@ const CounterSlice = createSlice({
     incrementby5: (state, action) => {
       state.counter = state.counter + action.payload;
     },
+    decrementby5: (state, action) => {
+      state.counter = state.counter - action.payload;
+    },
     increment: (state) => {
       state.counter = state.counter + 1;
     },
